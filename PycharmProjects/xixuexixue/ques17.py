@@ -8,12 +8,13 @@ class Solution:
     def minNumberInRotateArray(self, rotateArray):
         if len(rotateArray) == 0:
             return 0
-        n = 1
+        n = 0
         for num in rotateArray:
-            if num > rotateArray[n]:
-                return rotateArray[n]
+            if num < n:
+                return num
             else:
-                n = n + 1
+                n = num
+
     array1 = [1,2]
     self = ''
     print(minNumberInRotateArray(self,array1))
