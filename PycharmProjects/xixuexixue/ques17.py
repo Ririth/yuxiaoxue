@@ -6,15 +6,26 @@
 # -*- coding:utf-8 -*-
 class Solution:
     def minNumberInRotateArray(self, rotateArray):
-        if len(rotateArray) == 0:
+        l = len(rotateArray)
+        if l == 0:
             return 0
-        n = 0
-        for num in rotateArray:
-            if num < n:
-                return num
+        low = 0
+        high = l - 1
+        mid = int((low + high) / 2)
+        while low != high:
+            if rotateArray[0] == rotateArray[mid]:
+                if rotateArray[0] > rotateArray[1]:
+                    return rotateArray[1]
+                else:
+                    return rotateArray[0]
+            elif rotateArray[0] < rotateArray[mid]:
+                low = mid + 1
+                mid = int((low + high) / 2)
             else:
-                n = num
-
-    array1 = [1,2]
+                high = mid
+                low = 0
+                mid = int((low + high) / 2)
+        return rotateArray[mid]
+    array1 = [3,4,5,6,1,2]
     self = ''
     print(minNumberInRotateArray(self,array1))
