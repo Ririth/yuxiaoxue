@@ -16,4 +16,4 @@ class Solution:
                 n = n + 1
     array1 = [1,2]
     self = ''
-    print(minNumberInRotateArray(self,array1))
+    print(minNumberInRotateArray(self,array1));
