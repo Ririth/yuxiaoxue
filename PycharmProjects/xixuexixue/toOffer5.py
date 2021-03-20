@@ -8,6 +8,8 @@
 输入一个链表，从尾到头打印链表的值
 返回值：列表
 '''
+from inspect import stack
+
 
 class Solution:
     # 返回从尾部到头部的列表值序列，例如[1,2,3]

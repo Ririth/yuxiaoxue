@@ -28,6 +28,6 @@ class Solution:
                 low = 0
                 mid = int((low + high) / 2)
         return rotateArray[mid]
-    array1 = [3,4,5,1,2]
+    array1 = [1,2]
     self = ''
     print(minNumberInRotateArray(self,array1))
